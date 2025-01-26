@@ -3,6 +3,7 @@ import React, { useState } from "react";
 function RegisterForm() {
 
   const [name,setName] = useState()
+  const [email,setEmail] = useState()
 
   return (
     <div className="w-full max-w-md mx-auto mt-20">

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 
 function RegisterForm() {
+
+  const [name,setName] = useState()
+
   return (
     <div className="w-full max-w-md mx-auto mt-20">
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 border">

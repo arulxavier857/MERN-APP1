@@ -7,6 +7,9 @@ function App() {
     <>
       <div className='bg-gray-200 p-10'>
       <h1 className='text-blue-500'>Welcome to Health Plus</h1>
+      <div>
+         Section 1
+      </div>
       <RegisterForm/>
       </div>
     </>

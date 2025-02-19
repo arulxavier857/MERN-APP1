@@ -1,17 +1,25 @@
-import './App.css'
-import './index.css';  
-import RegisterForm from './RegisterForm';
-
+import React from 'react';
+import './index.css';
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Dashboard from './components/Dashboard';
+import AddProduct from './components/AddProduct';
+import EditProduct from './components/EditProduct';
 function App() {
   return (
     <>
-      <div className='bg-gray-200 p-10'>
-      <h1 className='text-blue-500'>Welcome to Health Plus</h1>
-      <div>
-         Section 1
-      </div>
-      <RegisterForm/>
-      </div>
+      <BrowserRouter>
+      <Header />
+      <main>
+        <Routes>
+              <Route path="/" element={<Dashboard />} /> 
+              <Route path="/addproduct" element={<AddProduct />} />
+              <Route path="/editproduct/:id" element={<EditProduct />} />
+        </Routes>
+      </main>
+      <Footer/>
+      </BrowserRouter>
     </>
   )
 }

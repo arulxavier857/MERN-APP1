@@ -6,5 +6,5 @@ const ProductSchema = new mongoose.Schema({
     price:Number
 })
 
-const ProductModel = mongoose.model("Products",ProductSchema,'Products')
-exports.module = ProductModel
+const ProductModel = new mongoose.model("Products",ProductSchema,'Products')
+module.exports = ProductModel

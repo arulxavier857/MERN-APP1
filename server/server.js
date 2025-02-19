@@ -15,8 +15,6 @@ mongoose.connect('mongodb://127.0.0.1:27017/Company')
 //Create Rest API 
 app.post('/addProduct', async (req,res)=>{
     try{
-        console.log('called')
-        console.log(req.body)
         await ProductModel.create(req.body)
         res.json({message:'Product Added Successfully'})
     }
